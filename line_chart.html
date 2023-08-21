@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<canvas id='myChart'></canvas>
+<script>
+  var ctx = document.getElementById('myChart')
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels:['January', 'February','March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
+      datasets: [{
+        data: [86, 71, 13, 45, 54, 28, 41,17, 91, 17, 61, 14],
+        label: 'Candy',
+        borderColor: 'rgba(120, 120, 255, 1)'
+      }, {
+        data: [100, 21, 133, 0, 25, 15, 61, 41, 28, 48, 92, 26],
+        label: 'Clothes',
+        borderColor: 'rgba(255, 100, 255, 1)'
+      }, {
+        data: [0, 21, 35, 12, 25, 42, 27, 36, 43, 15, 52, 38],
+        label: 'Amazon',
+        borderColor: 'rgba(100, 200, 100, 1)'
+      }, {
+        data: [8, 41, 31, 53, 43, 61, 75, 54, 84, 65, 73, 32],
+        label: 'Paper',
+        borderColor: 'rgb(161,147,47)'
+       }]
+    },
+    options:{
+      plugins:{
+        title: {
+          display: true,
+          text: 'Monthly Spending'
+        },
+        legend: {
+          position: 'left'
+        }
+      }
+    }
+  });
+</script>
+<canvas id='chart2'></canvas>
+    <script>
+      var cty = document.getElementById('chart2')
+      var nextChart = new Chart(cty, {
+        type: 'scatter',
+        data: {
+          datasets:[{
+              label: 'Dataset1',
+              backgroundColor: 'rgba(255, 200, 50, 1)',
+              pointBackgroundColor: 'rgba(255, 200, 50, 1)',
+              pointRadius: 4,
+              data: [
+                  {x: 7, y: 10},
+                  {x: 11, y: 25},
+                  {x: 17, y: 15},
+                  {x: 12, y: 17},
+                  {x: 8, y: 5},
+                  {x: 21, y: 25},
+                  {x: 28, y: 21},
+                  {x: 15, y: 15}
+              ]
+          }, {
+              label: 'Dataset2',
+              backgroundColor: 'rgba(211,26,26,0.79)',
+              pointBackgroundColor: 'rgba(211,26,26,0.79)',
+              pointRadius: 4,
+              data: [
+                  {x: 1, y: 10},
+                  {x: 7, y: 13},
+                  {x: 6, y: 16},
+                  {x: 9, y: 19},
+                  {x: 2, y: 16},
+                  {x: 5, y: 18},
+                  {x: 17, y: 11},
+                  {x: 14, y: 10}
+              ]
+          }, {
+              label: 'Dataset3',
+              backgroundColor: 'rgba(40,229,172,0.78)',
+              pointBackgroundColor: 'rgba(40,229,172,0.78)',
+              pointRadius: 4,
+              data: [
+                  {x: 8, y: 10},
+                  {x: 9, y: 13},
+                  {x: 21, y: 16},
+                  {x: 24, y: 19},
+                  {x: 18, y: 16},
+                  {x: 28, y: 18},
+                  {x: 12, y: 11},
+                  {x: 22, y: 10},
+                  {x: 7, y: 11},
+                  {x: 17, y: 11}
+              ]
+          }, {
+              label: 'Dataset4',
+              backgroundColor: 'rgba(70,173,31,0.89)',
+              pointBackgroundColor: 'rgba(70,173,31,0.89)',
+              pointRadius: 4,
+              data: [
+                  {x: 8, y: 10},
+                  {x: 8, y: 13},
+                  {x: 1, y: 16},
+                  {x: 2, y: 19},
+                  {x: 15, y: 16},
+                  {x: 24, y: 18},
+                  {x: 16, y: 11},
+                  {x: 25, y: 10},
+                  {x: 21, y: 11},
+                  {x: 19, y: 11}
+              ]
+          }
+          ]
+        },
+        options: {
+          scales: {
+            xAxis: {
+              beginAtZero: true
+            },
+            yAxis: {
+                beginAtZero: true
+            }
+          },
+          plugins: {
+            title: {
+              display:true,
+              text: 'Sales'
+            }
+          }
+
+        }
+      });
+
+
+    </script>
+</body>
+</html>
